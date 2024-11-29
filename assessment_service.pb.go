@@ -76,7 +76,7 @@ type GetLikeCountResponse struct {
 	sizeCache     protoimpl.SizeCache
 	unknownFields protoimpl.UnknownFields
 
-	Cnt int64 `protobuf:"varint,1,opt,name=cnt,proto3" json:"cnt,omitempty"`
+	Cnt int `protobuf:"varint,1,opt,name=cnt,proto3" json:"cnt,omitempty"`
 }
 
 func (x *GetLikeCountResponse) Reset() {
@@ -109,7 +109,7 @@ func (*GetLikeCountResponse) Descriptor() ([]byte, []int) {
 	return file_assessment_service_proto_rawDescGZIP(), []int{1}
 }
 
-func (x *GetLikeCountResponse) GetCnt() int64 {
+func (x *GetLikeCountResponse) GetCnt() int {
 	if x != nil {
 		return x.Cnt
 	}
