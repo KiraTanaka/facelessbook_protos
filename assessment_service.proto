@@ -20,5 +20,5 @@ message GetLikeCountRequest {
 
 // Объект, который метод (ручка) вернёт.
 message GetLikeCountResponse {
-  int64 cnt = 1;
+  int cnt = 1;
 }
