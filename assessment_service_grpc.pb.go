@@ -8,7 +8,7 @@
 
 // Текущий пакет - указывает пространство имен для сервиса и сообщений. Помогает избегать конфликтов имен.
 
-package facelessbook_protos
+package protos
 
 import (
 	context "context"
