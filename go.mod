@@ -1,4 +1,4 @@
-module facelessbook_protos
+module protos
 
 go 1.23.1
 
