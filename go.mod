@@ -1,4 +1,4 @@
-module assessment_service
+module protos
 
 go 1.23.1
 
