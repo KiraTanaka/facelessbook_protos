@@ -2,10 +2,10 @@
 syntax = "proto3";
 
 // Текущий пакет - указывает пространство имен для сервиса и сообщений. Помогает избегать конфликтов имен.
-package assessment_service;
+package assessment;
 
 // Настройки для генерации Go кода.
-option go_package = "/protos";
+option go_package = "/assessment";
 
 // PostLikes is service for assessment posts.
 service PostLikes {

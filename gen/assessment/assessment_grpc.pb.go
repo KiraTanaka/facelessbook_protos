@@ -4,11 +4,11 @@
 // versions:
 // - protoc-gen-go-grpc v1.5.1
 // - protoc             v5.29.0
-// source: assessment_service.proto
+// source: proto/assessment.proto
 
 // Текущий пакет - указывает пространство имен для сервиса и сообщений. Помогает избегать конфликтов имен.
 
-package protos
+package assessment
 
 import (
 	context "context"
@@ -23,7 +23,7 @@ import (
 const _ = grpc.SupportPackageIsVersion9
 
 const (
-	PostLikes_GetLikeCount_FullMethodName = "/assessment_service.PostLikes/GetLikeCount"
+	PostLikes_GetLikeCount_FullMethodName = "/assessment.PostLikes/GetLikeCount"
 )
 
 // PostLikesClient is the client API for PostLikes service.
@@ -118,7 +118,7 @@ func _PostLikes_GetLikeCount_Handler(srv interface{}, ctx context.Context, dec f
 // It's only intended for direct use with grpc.RegisterService,
 // and not to be introspected or modified (even as a copy)
 var PostLikes_ServiceDesc = grpc.ServiceDesc{
-	ServiceName: "assessment_service.PostLikes",
+	ServiceName: "assessment.PostLikes",
 	HandlerType: (*PostLikesServer)(nil),
 	Methods: []grpc.MethodDesc{
 		{
@@ -127,5 +127,5 @@ var PostLikes_ServiceDesc = grpc.ServiceDesc{
 		},
 	},
 	Streams:  []grpc.StreamDesc{},
-	Metadata: "assessment_service.proto",
+	Metadata: "proto/assessment.proto",
 }
