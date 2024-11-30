@@ -1,4 +1,4 @@
-module protos
+module github.com/KiraTanaka/facelessbook_protos
 
 go 1.23.1
 
