@@ -1,0 +1,17 @@
+syntax = "proto3";
+
+package notification;
+
+option go_package = "/notification";
+
+service PushNotification {
+  rpc Send (SendPushRequest) returns (SendPushResponse);
+}
+
+message SendPushRequest {
+  string post_id = 1;
+}
+
+message SendPushResponse {
+  int64 cnt = 1;
+}
