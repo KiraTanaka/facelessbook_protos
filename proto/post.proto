@@ -12,17 +12,19 @@ service Post {
   rpc ListPosts  (ListPostsRequest) returns (ListPostsResponse);
 }
 
-  message CreateRequest {
-    string createTime = 1;
-    string authorId = 2;
-    string text = 3;
-  }
-  
-  message CreateResponse {
+message PostMessage{
     string id = 1;
     string createTime = 2;
     string authorId = 3;
     string text = 4;
+}
+
+  message CreateRequest {
+    PostMessage post = 1;
+  }
+  
+  message CreateResponse {
+    string id = 1;
   }
 
   message UpdateRequest {
@@ -47,17 +49,12 @@ service Post {
   }
     
   message PostByIdResponse {
-      string createTime = 1;
-      string authorId = 2;
-      string text = 3;
+    PostMessage post = 1;
   }
   
   message ListPostsRequest {
   }
     
   message ListPostsResponse {
-      string id = 1;
-      string createTime = 2;
-      string authorId = 3;
-      string text = 4;
+    repeated PostMessage post = 1;
   }
