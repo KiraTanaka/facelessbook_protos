@@ -14,7 +14,7 @@ service Post {
 
 message PostMessage{
     string id = 1;
-    string createTime = 2;
+    string createdTime = 2;
     string authorId = 3;
     string text = 4;
 }
@@ -56,5 +56,5 @@ message PostMessage{
   }
     
   message ListPostsResponse {
-    repeated PostMessage post = 1;
+    repeated PostMessage posts = 1;
   }
