@@ -1,0 +1,40 @@
+syntax = "proto3";
+
+package user;
+
+option go_package = "/user";
+
+service User {
+  rpc NickName (NickNameRequest) returns (NickNameResponse);
+  rpc Profile  (ProfileRequest) returns (ProfileResponse);
+  rpc UpdateProfile  (UpdateRequest) returns (UpdateResponse);
+}
+
+message Profile {
+    string nickname = 1;
+    string aboutMe = 2;
+  }
+
+message NickNameRequest {
+  string id = 1;
+}
+
+message NickNameResponse {
+  string nickname = 1;
+}
+
+message ProfileRequest {
+    string id = 1;
+  }
+  
+  message ProfileResponse {
+    Profile profile = 1;
+  }
+
+  message UpdateRequest {
+    Profile profile = 1;
+  }
+  
+  message UpdateResponse {
+    bool success = 1;
+  }

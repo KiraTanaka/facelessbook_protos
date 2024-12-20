@@ -12,7 +12,7 @@ service Post {
   rpc ListPosts  (ListPostsRequest) returns (ListPostsResponse);
 }
 
-message PostMessage{
+message PostInformation{
     string id = 1;
     string createdTime = 2;
     string authorId = 3;
@@ -20,7 +20,7 @@ message PostMessage{
 }
 
   message CreateRequest {
-    PostMessage post = 1;
+    PostInformation post = 1;
   }
   
   message CreateResponse {
@@ -29,11 +29,11 @@ message PostMessage{
 
   message UpdateRequest {
       string id = 1;
-      string text = 2;
+      string newText = 2;
   }
     
   message UpdateResponse {
-      string newText = 2;
+    bool success = 1;
   }
   
   message DeleteRequest {
@@ -49,12 +49,12 @@ message PostMessage{
   }
     
   message PostByIdResponse {
-    PostMessage post = 1;
+    PostInformation post = 1;
   }
   
   message ListPostsRequest {
   }
     
   message ListPostsResponse {
-    repeated PostMessage posts = 1;
+    repeated PostInformation posts = 1;
   }
