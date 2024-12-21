@@ -1,0 +1,42 @@
+syntax = "proto3";
+
+package subscriber;
+
+option go_package = "/subscriber";
+
+service Subscriber {
+  rpc Subscribe  (SubscribeRequest) returns (SubscribeResponse);
+  rpc Unsubscribe (UnsubscribeRequest) returns (UnsubscribeResponse);
+  rpc ListSubscribers (ListSubscribersRequest) returns (ListSubscribersResponse);
+}
+
+message Profile {
+    string nickname = 1;
+    string aboutMe = 2;
+  }
+
+message SubscribeRequest {
+  string publisher_id = 1;
+  string subscriber_id = 2;
+}
+
+message SubscribeResponse {
+  bool success = 1;
+}
+
+message UnsubscribeRequest {
+    string publisher_id = 1;
+    string subscriber_id = 2;
+  }
+  
+  message UnsubscribeResponse {
+    bool success = 1;
+  }
+
+  message ListSubscribersRequest {
+    string publisher_id = 1;
+  }
+  
+  message ListSubscribersResponse {
+    repeated string subscriber_ids = 1;
+  }
